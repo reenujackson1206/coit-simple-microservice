@@ -25,4 +25,4 @@ jobs:
       - name: display
         run: echo "Test completed"
       - name: display github details
-        run: echo "${{ toJSON(github) }}"
+        run: echo "${{ toJSON(github.event) }}"
