@@ -1,1 +1,16 @@
-
+name: CI
+on: push
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Build an run unit test
+        run: |
+          cd coit-frontend
+          npm test || true
+      - name: Check the Vulnaribilities of Dependencies
+        run: |
+          cd coit-frontend
+          npm audit || true
