@@ -22,7 +22,7 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps: 
-      - name: Get code
-        uses: actions/checkout@v4
       - name: display
         run: echo "Test completed"
+      - name: display github details
+        run: echo "${{ toJSON(github) }}"
