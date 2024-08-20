@@ -17,7 +17,7 @@ jobs:
       - name: Check the Vulnaribilities of Dependencies
         run: |
           cd coit-frontend
-          npm audit || tru
+          npm audit || true
   test:
     needs: build
     runs-on: self-hosted
