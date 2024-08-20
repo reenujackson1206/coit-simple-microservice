@@ -18,3 +18,5 @@ jobs:
         run: |
           cd coit-frontend
           npm audit || true
+      - name: Fix vulnerabilities
+        run: npm audit fix --force
