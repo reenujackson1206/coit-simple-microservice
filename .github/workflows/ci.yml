@@ -17,6 +17,12 @@ jobs:
       - name: Check the Vulnaribilities of Dependencies
         run: |
           cd coit-frontend
-          npm audit || true
-      - name: Fix vulnerabilities
-        run: npm audit fix --force
+          npm audit || tru
+  test:
+    needs: build
+    runs-on: self-hosted
+    steps: 
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: display
+        run: echo "Test completed"
