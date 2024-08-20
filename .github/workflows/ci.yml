@@ -7,7 +7,9 @@ jobs:
       - name: Get code
         uses: actions/checkout@v4
       - name: Install nodejs
-        run: npm install
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
       - name: Build an run unit test
         run: |
           cd coit-frontend
