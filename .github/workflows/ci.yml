@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
+      - name: Install nodejs
+        uses: actions/setup-node@v3
       - name: Build an run unit test
         run: |
           cd coit-frontend
